@@ -1,0 +1,525 @@
+@charset utf-8;
+
+@font-face {
+    font-family: HANBatang;
+    src: local(함초롬바탕),
+        local(함초롬바탕),
+        url('../font/HANBatang.eot') format('embedded-opentype'),
+        url(.../font/HANBatang.woff) format('woff'),
+        url(.../font/HANBatang.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+
+@font-face {
+    font-family: HANBatang;
+    src: url('../font/HANBatangB.eot') format('embedded-opentype');
+    font-weight: bold;
+}
+
+
+
+/*Reset*/
+* {margin: 0; padding: 0; letter-spacing: -1px; }
+html,body {height: 100%; }
+li {list-style: none; }
+a {text-decoration: none; color: #fff; }
+body {font-family: 'HANBatang'; }
+img, button, fieldset, input {border: 0; outline: 0; }
+legend {width: 0; height: 0; font-size: 0; color: transparent; text-indent: -9999px; overflow: hidden; }
+
+
+/*layer*/
+#visual {width: 100%; height: 100%; margin: 0 auto; position: relative; overflow: hidden; }
+
+
+/*left_top*/
+.left_top {position: absolute; left: 0; top: 0; z-index: 4; animation: left_top 6s forwards; transform-origin: left top; }
+@keyframes left_top {
+    0% {transform: scale(0.85); }
+    100% {transform: scale(1); }
+}
+
+
+.right_top {position: absolute; right: 0; top: 0; z-index: 3; animation: right_top 8s forwards; transform-origin: right top; }
+@keyframes right_top {
+    0% {transform: scale(0.9); }
+    100% {transform: scale(1); }
+}
+
+
+.left_bottom {position: absolute; left: 0; top: 300px; z-index: 3; animation: left_bottom 6s forwards linear; transform-origin: left; }
+
+@keyframes left_bottom {
+    0% {transform: scale(0.8); }
+    100% {transform: scale(1); }
+}
+
+
+.right_bottom {position: absolute; right: 0; top: 480px; z-index: 3; animation: right_bottom 9s forwards; transform-origin: right; }
+
+@keyframes right_bottom {
+    0% {transform: scale(0.8); }
+    100% {transform: scale(1); }
+}
+
+
+
+/*bird*/
+.Bird_box {position: absolute; z-index: 3; top: 0; }
+.Bird_box .Bird {position: absolute; animation: Bird 15s forwards; animation-delay: 1s; }
+#visual.hyerin .Bird {position: absolute; top: 500px; left: 0; animation: Bird0 6s forwards; animation-delay: 2s; z-index: 10; opacity: 0; }
+@keyframes Bird0 {
+    0% {left: -400px; top: 50%; margin-top: 700px; opacity: 1; }
+    10% {left: -150px; top: 50%; margin-top: 650px; opacity: 1; }
+    20% {left: -200px; top: 50%; margin-top: 670px; opacity: 1; }
+    35% {left: 50%; margin-left: 400px; top: 50%; margin-top: 545px; opacity: 1; }
+    70% {left: 50%; margin-left: 1200px; top: 500px; opacity: 1; }
+    100% {left: 50%; margin-left: 2000px; top: 90px; opacity: 1; }
+}
+
+/*.Bird_box .Bird {animation: cubic-bezier(.21,1.03,.82,.41);}*/
+/*새 날아가는 모습 자연스럽게!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+@keyframes Bird {
+    0% {left: -400px; top: 50%; margin-top: 300px; }
+    10% {left: -150px; top: 50%; margin-top: 250px; }
+    20% {left: -200px; top: 50%; margin-top: 270px; }
+    35% {left: 50%; margin-left: 400px; top: 50%; margin-top: 245px; }
+    80% {left: 50%; margin-left: 1200px; top: -100px; }
+    100% {left: 50%; margin-left: 1400px; top: -130px; }
+}
+
+.Bird_box .Bird .Bird_ani {width: 360px; height: 123px; animation: Bird_ani 0.2s infinite alternate steps(5); background: url(../images/bird.png); background-position: 0 0; }
+@keyframes Bird_ani {
+    0% {background-position: 0 0; }
+    100% {background-position: -1800px 0; }
+}
+
+
+
+/*Door*/
+.Door {position: absolute; top: 360px; left: 420px; width: 263px; height: 671px; z-index: 6; text-align: center;  animation: Door_main 4s forwards; text-align: center}
+
+
+.Door ul .bg {width: 230px; display: inline-block}
+.Door ul .bg img {width: 100%;}
+
+.Door .top {width: 740px; height: 415px; background: url('../images/door_top.png'); position: absolute; top: 480px; left: -420px; z-index: 5; animation: left_bottom 6s forwards; transform-origin: left; }
+
+#visual.hyerin .Door .top {animation: door0 8s forwards; }
+
+@keyframes door0 {
+    0% {transform: scale(1); top: 480px; left: 0; opacity: 0.85; }
+    100% {transform: scale(0.8); top: 895px; left: -740px; opacity: 0; }
+}
+
+
+.Door .text01 {position: absolute; width: 263px; font-size: 30px; color: #fff; top: 260px; z-index: 1; opacity: 0; animation: text01 forwards 3s; animation-delay: 3s; }
+
+@keyframes text01 {
+    0% {opacity: 0; }
+    100% {opacity: 0.85; }
+}
+
+
+.Door .text02 {position: absolute; width: 263px; font-size: 30px; color: #fff; top: 260px; z-index: 1; opacity: 0.85; display: none }
+.Door .text02 span {color: #468ca6}
+
+
+
+/*Me*/
+.Me {width: 200px; height: 45px; position: absolute; color: #fff; z-index: 2; font-size: 30px; top: 180px; left: 50%; margin-left: 165px; overflow: hidden; opacity: 0.85; }
+
+.Me a {opacity: 0; }
+
+.Me.action a {animation: Me 3s forwards; animation-delay: 0.5s; }
+
+@keyframes Me {
+    0% {left: 50%; margin-left: 340px; opacity: 0; }
+    100% {left: 50%; margin-left: 0px; opacity: 1; }
+}
+
+.Me:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+
+
+
+/*Deer*/
+.Deer .bg {position: absolute; top: 500px; right: 30px; z-index: 2; width: 327px; height: 247px; }
+
+.Deer.action .bg {animation: deer_ani 4s forwards steps(30) alternate; background: url(../images/deer.png) ; background-position: 0 0; }
+
+@keyframes deer_ani {
+    0% {background-position: 0 0; opacity: 0; right: -60px; }
+    50% {background-position: 0 0; opacity: 1; right: -60px; }
+    100% {background-position: -9810px 0; opacity: 1; right: 30px; }
+}
+
+
+
+.Deer .text {width: 150px; height: 40px; position: absolute; color: #fff; font-size: 30px; top: 650px; right: 320px; z-index: 3; opacity: 0.85; overflow: hidden; }
+.Deer .text:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+.Deer .text a {opacity: 0; position: absolute; }
+.Deer.action .text a {animation: deer_text 3s forwards; animation-delay: 3.5s; }
+
+@keyframes deer_text {
+    0% {right: -320px; opacity: 0; }
+    100% {right: 0; opacity: 1; }
+}
+
+
+/*Squirrel*/
+.Squirrel {width: 98px; height: 148px; }
+.Squirrel.action .bg {width: 98px; height: 148px; background: url('../images/Squirrel0.png'); position: absolute; top: 840px; right: 380px; z-index: 2; animation: Squirrel_ani 5s forwards steps(29); background-position: 0 0; }
+
+@keyframes Squirrel_ani {
+    0% {background-position: 0 0; opacity: 0; top: 860px; }
+    35% {background-position: 0 0; opacity: 0; top: 860px; }
+    100% {background-position: -2842px 0; opacity: 1; top: 840px; }
+}
+
+.Squirrel .text {width: 140px; height: 40px; position: absolute; z-index: 3; color: #fff; font-size: 30px; top: 894px; right: 490px; opacity: 0.85; overflow: hidden; }
+.Squirrel .text a {opacity: 0; position: absolute; }
+.Squirrel.action .text a {animation: Squirrel_text 4s forwards; animation-delay: 4s; }
+
+@keyframes Squirrel_text {
+    0% {right: -490px; opacity: 0; }
+    100% {right: 0; opacity: 1; }
+}
+
+.Squirrel .text:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+
+
+/*Rabbit*/
+.Rabbit {width: 106px; height: 81px; }
+.Rabbit.action .bg {width: 106px; height: 81px; background: url('../images/rabbit000.png'); position: absolute; top: 620px; left: 700px; z-index: 2; animation: Rabbit_ani 4s forwards steps(22); background-position: 0 0; }
+
+@keyframes Rabbit_ani {
+    0% {background-position: 0 0; opacity: 0; left: 670px; }
+    50% {background-position: 0 0; opacity: 0; left: 680px; }
+    100% {background-position: -2332px 0; opacity: 1; left: 700px; }
+}
+
+.Rabbit .text {width: 90px; height: 40px; position: absolute; z-index: 3; color: #fff; font-size: 30px; left: 820px; top: 650px; opacity: 0.85; overflow: hidden; }
+.Rabbit .text a {opacity: 0; position: absolute; }
+.Rabbit.action .text a {animation: Rabbit_text 4s forwards; animation-delay: 4s; }
+
+@keyframes Rabbit_text {
+    0% {opacity: 0; left: -90px; }
+    100% {opacity: 1; left: 0; }
+}
+
+.Rabbit .text:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+
+
+/*Owl*/
+.Owl {width: 320px; height: 270px; }
+.Owl.action .bg {width: 320px; height: 270px; background: url('../images/Owl1.png'); position: absolute; top: 100px; left: 230px; z-index: 4; animation: Owl_ani 6s forwards steps(34); background-position: 0 0; }
+
+@keyframes Owl_ani {
+    0% {background-position: 0 0; opacity: 0; top: -30px; left: 600px; }
+    50% {background-position: 0 0; opacity: 0; top: 60px; left: 300px; }
+    100% {background-position: -10880px 0; opacity: 1; top: 115px; left: 210px; }
+}
+
+.Owl .text {width: 100px; height: 40px; position: absolute; z-index: 5; color: #fff; font-size: 30px; top: 300px; left: 315px; opacity: 0.85; overflow: hidden; }
+.Owl .text a {opacity: 0; position: absolute; }
+.Owl.action .text a {animation: Owl_text 4s forwards; animation-delay: 5s; }
+
+@keyframes Owl_text {
+    0% {left: -340px; opacity: 0; }
+    100% {left: 0; opacity: 1; }
+}
+.Owl .text:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+
+
+/*Bear*/
+.Bear {width: 290px; height: 206px; }
+.Bear .top {width: 614px; height: 651px; background: url('../images/bear_top.png'); position: absolute; top: 640px; z-index: 4; animation: bear_top 6s forwards linear; transform-origin: left; }
+
+@keyframes bear_top {
+    0% {transform: scale(0.8); }
+    100% {transform: scale(1); }
+}
+
+#visual.hyerin .Bear .top {animation: bear_top0 8s forwards; }
+
+@keyframes bear_top0 {
+    0% {transform: scale(1); top: 640px; left: 0; opacity: 0.85; }
+    100% {transform: scale(0.8); top: 1291px; left: -651px; opacity: 0; }
+}
+
+
+
+.Bear.action .bg {width: 290px; height: 206px; position: absolute; left: 15px; top: 500px; z-index: 3; background: url('../images/bear1.png'); animation: bear_ani 7s forwards steps(35); background-position: 0 0; }
+
+@keyframes bear_ani {
+    0% {background-position: 0 0; opacity: 0; left: -150px; }
+    60% {background-position: 0 0; opacity: 0; left: -150px; }
+    100% {background-position: -10150px 0; opacity: 1; left: 15px; }
+}
+
+
+.Bear .text {width: 120px; height: 40px; position: absolute; color: #fff; font-size: 30px; top: 630px; left: 260px; z-index: 4; opacity: 0.85; overflow: hidden; }
+.Bear .text:hover a {background: url('../images/text_bottom.jpg') repeat-x bottom; }
+
+.Bear .text a {opacity: 0; position: absolute; }
+.Bear.action .text a {animation: Bear_text 3.5s forwards linear; animation-delay: 5.5s; }
+
+@keyframes Bear_text {
+    0% {left: -340px; opacity: 0; }
+    100% {left: 0; opacity: 1; }
+}
+
+/*leaf*/
+.leaf01 {width: 6px; height: 11px; z-index: 2; position: absolute; background: url('../images/leaf.png'); animation: leaf01 10s forwards linear; top: 0; right: 300px; }
+
+@keyframes leaf01 {
+    0%; {transform: rotate(45deg); top: 0; right: 300px; opacity: 1; }
+    20% {transform: rotate(-60deg); top: 100px; right: 500px; opacity: 1; }
+    50% {transform: rotate(135deg); top: 200px; right: 450px; opacity: 1; }
+    65% {transform: rotate(0deg); top: 350px; right: 700px; opacity: 1; }
+    100% {transform: rotate(-180deg); top: 560px; right: 1200px; opacity: 0; }
+}
+
+.leaf02 {width: 6px; height: 11px; z-index: 2; position: absolute; background: url('../images/leaf.png'); animation: leaf02 12s forwards; top: 200px; right: 400px; }
+
+@keyframes leaf02 {
+    0% {transform: rotate(60deg); top: 200px; right: 400px; opacity: 1; }
+    20% {transform: rotate(120deg); top: 340px; right: 600px; opacity: 1; }
+    40% {transform: rotate(0deg); top: 450px; right: 550px; opacity: 1; }
+    100% {transform: rotate(180deg); top: 560px; right: 900px; opacity: 0; }
+}
+
+/*text*/
+.sub_text {width: 100%; height: 1000px; position: absolute; z-index: 2; top: 100px; overflow: hidden; left: 0; }
+.sub_text .bg {width: 100%; height: 250px; opacity: 0; position: relative; left: 0; top:0; z-index: 3; }
+.sub_text.hyerin .bg {animation: sub_bg 2.5s forwards; animation-delay: 6s; left: 0; opacity: 0; background: #111; }
+@keyframes sub_bg {
+    0% {left: 1920px; opacity: 0; }
+    100% {left: 0; opacity: 0.5; }
+}
+
+
+
+.sub_text .title {width: 372px; height: 119px; left: 0; background: url('/images/sub_title1.png') no-repeat; position: absolute; z-index: 3; top: 0; margin: 65.5px 0 0 100px; overflow: hidden; opacity: 0; }
+.sub_text.hyerin .title {animation: text_effect 1.5s forwards; animation-delay: 8.5s; opacity: 0; background-position: 0 0; }
+@keyframes text_effect {
+    0% {background-position: 0 -119px; opacity: 1; }
+    100% {background-position: 0 0; opacity: 1; }
+}
+
+.sub_text .text_box {width: 100%; height: 0px;  position: absolute; z-index: 3; overflow: hidden; opacity: 0;}
+.sub_text.hyerin .text_box {animation: title_b 3.5s forwards ease; animation-delay: 11s; opacity: 1; }
+@keyframes title_b {
+    0% {height: 0; }
+    100% {height: 650px; }
+}
+
+
+.sub_text .text_box .text_title1 {width: 80%; padding-left: 50px; font-size: 20px; margin-top: 50px; color: #fff; opacity: 0.8; z-index: 3; }
+.sub_text .text_box .text_title2 {width: 80%; padding-left: 50px; font-size: 20px; margin-top: 50px; color: #fff; opacity: 0.8; z-index: 3; }
+
+
+.sub_text .text_box .text1 {width: 570px; height: 90px; padding-left: 50px; text-indent: 20px; font-size: 24px; margin-top: 20px; color: aliceblue; opacity: 0.8; line-height: 35px; z-index: 3; word-break: keep-all; }
+.sub_text .text_box .text2 {width: 720px; height: 500px; padding-left: 50px; text-indent: 20px; font-size: 24px; margin-top: 20px; color: aliceblue; opacity: 0.8; line-height: 35px; z-index: 3; word-break: keep-all; }
+
+.sub_text .text_box .text1, .sub_text .text_box .text2 {animation: text_a 3s infinite ease-in; }
+@keyframes text_a {
+    0% {opacity: 0.85; }
+    50% {opacity: 0.45; }
+    100% {opacity: 0.85; }
+}
+
+/*cloud*/
+.cloud {width: 100%; height: 481px; position: absolute; z-index: 1; top: 0; }
+.cloud.hyerin {animation: cloud 10s forwards; }
+@keyframes cloud {
+    0% {transform: scale(1); top: 110px; }
+    30% {transform: scale(2); top: 250px; }
+    100% {transform: scale(2); top: 250px; }
+}
+
+
+.cloud .cloud01 {width: 3840px; height: 481px; position: absolute; top: 110px; animation: cloud01 180s infinite linear; z-index: 1; background: url('../images/cloud01.png') repeat-x; }
+
+@keyframes cloud01 {
+    0% {left: 0; }
+    30% {left: -1500px; }
+    80% {left: -3000px; }
+    100% {left: -3840px; }
+}
+
+
+.cloud .cloud02 {width: 3840px; height: 481px; position: absolute; top: 110px; animation: cloud02 210s infinite linear; z-index: 1; background: url('../images/cloud02.png') repeat-x; }
+
+@keyframes cloud02 {
+    0% {left: 0; }
+    60% {left: -2000px; }
+    100% {left: -3840px; }
+}
+
+.cloud .cloud03 {width: 3840px; height: 481px; position: absolute; top: 110px; animation: cloud03 180s infinite linear; z-index: 1; background: url('../images/cloud03.png') repeat-x; }
+
+@keyframes cloud03 {
+    0% {left: -250px; }
+    100% {left: -4090px; }
+}
+
+.cloud .cloud04 {width: 3840px; height: 481px; position: absolute; top: 110px; animation: cloud04 210s infinite linear; z-index: 1; background: url('../images/cloud04.png') repeat-x; }
+
+@keyframes cloud04 {
+    0% {left: -100px; }
+    40% {left: -2300px; }
+    100% {left: -3940px; }
+}
+
+.cloud .cloud05 {width: 3840px; height: 481px; position: absolute; top: 110px; animation: cloud05 180s infinite linear; z-index: 1; background: url('../images/cloud05.png') repeat-x; }
+
+@keyframes cloud05 {
+    0% {left: -30px; }
+    30% {left: -1000px; }
+    100% {left: -3810px; }
+}
+
+
+
+
+/*bgbottom*/
+/*
+.bgbottom {width: 100%; height: 100%; position: absolute; top: 0; z-index: 0; animation: bgbottom 6s forwards; }
+@keyframes bgbottom {
+    0% {transform: scale(1.2); }
+    100% {transform: scale(1); }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*sub*/
+
+/*leftright*/
+#visual.hyerin .left_top {position: absolute; left: 0; top: 0; z-index: 2; animation: left_top0 10s forwards; transform-origin: left top; }
+@keyframes left_top0 {
+    0% {transform: scale(1); top: 0; left: 0; opacity: 0.85; }
+    100% {transform: scale(0.8); top: -425px; left: -679px; opacity: 0; }
+}
+
+
+#visual.hyerin .right_top {position: absolute; right: 0; top: 0; z-index: 2; animation: right_top0 8s forwards; transform-origin: right top; }
+@keyframes right_top0 {
+    0% {transform: scale(1); top: 0; right: 0; opacity: 0.85; }
+    100% {transform: scale(0.8); top: -623px; right: -586px; opacity: 0; }
+}
+
+
+#visual.hyerin .left_bottom {position: absolute; left: 0; top: 300px; z-index: 2; animation: left_bottom0 6s forwards linear; transform-origin: left; }
+
+@keyframes left_bottom0 {
+    0% {transform: scale(1); top: 300px; left: 0; opacity: 0.85; }
+    100% {transform: scale(0.9); top: 1000px; left: -1368px; opacity: 0; }
+}
+
+
+#visual.hyerin .right_bottom {position: absolute; right: 0; top: 480px; z-index: 2; animation: right_bottom0 9s forwards; transform-origin: right; }
+
+@keyframes right_bottom0 {
+    0% {transform: scale(1); top: 480px; right: 0; opacity: 0.85; }
+    100% {transform: scale(0.7); top: -801; right: -1341px; opacity: 0; }
+}
+
+
+
+
+/*moon*/
+#visual.hyerin .moon {width: 4000px; height: 4000px; position: absolute; z-index: 3; top: 168px; right: 578px; background: url('../images/moon1.png') 0px -5px no-repeat; background-size: 100%; opacity: 0.5; animation: moon 6s forwards cubic-bezier(.18,.8,.61,.99); }
+
+@keyframes moon {
+    0% {transform: scale(0.01); opacity: 1; top: -1768px; right: -1400px; }
+    100% {transform: scale(1); opacity: 1; top: -1768px; right: -1400px; }
+}
+
+/*content*/
+.content_Homepage {width: 1300px; height: 950px; position: absolute; z-index: 1; right: 0; opacity: 0; }
+#visual.hyerin .content_Homepage {position: absolute; z-index: 3; right: 0; animation: homepage 3s forwards; animation-delay: 5s; opacity: 0; }
+@keyframes homepage {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+.content_Homepage .c01 {width: 200px; height: 200px; border-radius: 50%; position: absolute; left: 30px; top: 50px; z-index: 4; overflow: hidden; background: #000; }
+.content_Homepage .c01:hover img {opacity: 0.7}
+.content_Homepage .c01 img {width: 100%; }
+
+.content_Homepage .c02 {width: 300px; height: 300px; border-radius: 50%; position: absolute; left: 380px; top: 150px; z-index: 4; overflow: hidden; background: #000; }
+.content_Homepage .c02:hover img {opacity: 0.7}
+.content_Homepage .c02 img {width: 100%; }
+
+.content_Homepage .c03 {width: 250px; height: 250px; border-radius: 50%; position: absolute; left: 780px; top: 10px; z-index: 4; overflow: hidden; background: #000; }
+.content_Homepage .c03:hover img {opacity: 0.7}
+.content_Homepage .c03 img {width: 100%; }
+
+.content_Homepage .c04 {width: 200px; height: 200px; border-radius: 50%; position: absolute; left: 30px; top: 50px; z-index: 4; overflow: hidden; background: #000; }
+.content_Homepage .c04:hover img {opacity: 0.7}
+.content_Homepage .c04 img {width: 100%; }
+
+.content_Homepage .c05 {width: 200px; height: 200px; border-radius: 50%; position: absolute; left: 30px; top: 50px; z-index: 4; overflow: hidden; background: #000; }
+.content_Homepage .c05:hover img {opacity: 0.7}
+.content_Homepage .c05 img {width: 100%; }
+
+
+
+
+.content_Homepage .c06 {width: 70px; height: 70px; border-radius: 50%; position: absolute; left: 180px; top: 300px; z-index: 4; overflow: hidden; background: #999; text-align: center; color: #fff; line-height: 70px; animation: }
+.content_Homepage .c06:hover {opacity: 0.7}
+
+.content_Homepage .c07 {width: 100px; height: 100px; border-radius: 50%; position: absolute; left: 360px; top: 20px; z-index: 4; overflow: hidden; background: #ddd; text-align: center; color: #fff; line-height: 100px; }
+.content_Homepage .c07:hover {opacity: 0.7}
+
+.content_Homepage .c08 {width: 85px; height: 85px; border-radius: 50%; position: absolute; left: 770px; top: 450px; z-index: 4; overflow: hidden; background: #999; text-align: center; color: #fff; line-height: 85px; }
+.content_Homepage .c08:hover {opacity: 0.7}
+
+
+.c09 {display: none;}
+.c10 {position: absolute; right: 50px; top: 50px; font-weight: bold; font-size: 20px; text-transform: uppercase;}
+
+
+
+
+
+
+
+
+/*bgbottom*/
+.bgbottom {width: 100%; height: 100%; position: absolute; top: 0; }
+.bgbottom .bottom {width: 100%; height: 100%; position: absolute; top: 0; z-index: 1; background: url('../images/bg_sub_bottom.png'); }
+
+#visual.hyerin .bgbottom .bottom {width: 100%; height: 100%; position: absolute; top: 0; z-index: 1; background: url('../images/bg_sub_bottom.png'); animation: sub_bottom 8s forwards; }
+
+@keyframes sub_bottom {
+    0% {top: 0; opacity: 0.85; }
+    100% {top: 700px; opacity: 0; }
+}
+
+.bgbottom .sky {width: 100%; height: 100%; position: absolute; top: 0; z-index: 0; background: url('../images/bg_sub.jpg'); }
