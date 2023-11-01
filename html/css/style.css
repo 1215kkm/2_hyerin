@@ -1,0 +1,489 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:600');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee:400,500,700');
+
+
+* {margin: 0; padding: 0}
+li {list-style: none}
+img, button {border:0; outline: 0}
+a {text-decoration: none; color:#9e9e9e; }
+html,body {width:100%; height: 100%; font-family: 'Mukta Mahee', sans-serif; font-weight:400; }
+body {overflow-x: hidden}
+ul{list-style:none}
+ol li{display:list-item}
+button{padding:0;border:0;background:transparent;cursor:pointer}
+
+a:hover {cursor: pointer;}
+
+
+/**********고정세팅**********/
+h1 {width:200px; height:100px;  position: fixed; top:10px; left:40px; text-shadow: 7px 7px 3px rgba(0,0,0,0.2);  z-index: 99; display:none }
+h1 a {font-size:56px; color:#fff;}
+h1 a span {font-size:14px; color:#9e9e9e }
+
+#dot {z-index: 99;position: fixed;right: 40px; top: 45%; text-align: right;display:none }
+#dot li a {font-size: 12px; font-family: 'Mukta Mahee', sans-serif;padding: 5px;width:2px; height: 2px;background-color: rgba(255,255,255,0.5); display: inline-block;border-radius: 50%;font-weight:700;border: 2px solid transparent;color:#9e9e9e;transition: all 0.2s ; opacity: 0.7 }
+#dot li {position: relative}
+#dot li a:hover { color:rgba(255,255,255,1); background-color:rgba(255,255,255,1) }
+#dot li a span {width:100px;opacity:0.5; position: absolute;right: 30px; top: 0}
+#dot li.on a {border: 2px solid #11ded7;  transition: all .5s; opacity: 1;} 
+#dot li.on a span {opacity: 1 } 
+
+.porttext {font-family:"crimson text"; font-size:12px; color:#9e9e9e; position: fixed; left:40px; bottom:20px; font-style: italic; transform: rotate(-90deg); transform-origin: left top; display:none}
+.scrolltext { font-size:14px; color:#9e9e9e; position: absolute; left:57%; margin-left:-40px; bottom:45px; font-style: italic; display:none ; z-index: 4}
+.scrollline {width:1px; height:40px; background:linear-gradient(to bottom, #9e9e9e, rgba(0,0,0,0)); position: absolute; left:57%; bottom:0; font-weight:nomal;z-index: 4;  display:none}
+.linktext {font-family:"crimson text"; font-size:13px; color:#9e9e9e; position: fixed; right:50px; bottom:30px; font-style: italic; text-align:right; z-index: 99; display:none}
+.linktext a:hover {color:#fff}
+
+.icon-box {width:85px; height:38px; position: fixed; top:27px; right:40px;   z-index: 99;display:block}
+.icon-box .hamburger {width:42px; height:38px; font-family: 'Mukta Mahee', sans-serif;  color:#9e9e9e;  font-size:16px; line-height:38px;text-align:center; font-weight:400 ; transition: all 0.1s ease-in; position: absolute;right:61px;}
+.icon-box .hamburger-b {width:42px; height:38px;background:url(../images/left.png) no-repeat;position:absolute;  right:1px;transition: all 0.1s ease-in }
+.icon-box .hamburger-a {width:42px; height:38px; background:url(../images/right.png) no-repeat;  position:absolute; right:15px;transition: all 0.1s ease-in }
+
+
+/**********메인**********/
+#main {width:100%;height:2230px; margin:0 auto; background: url(../images/back-main00.jpg) center no-repeat; background-size:100%;background-position:top;background-attachment:fixed; transition: all 10s ease-in-out; }
+#main:hover {background-position:bottom }
+.mainwrap {width:100%; height:940px; margin:0 auto;position: relative; }
+
+h2 {font-size:173px; color:#fff;position: absolute;left:57%; top:350px; margin-left:-10px; font-weight:700 ;display:none}
+h2  span{font-size:24px; color:#11ded7; }
+h2:hover {color:#000; text-shadow: 0px 0px 20px #fff;transition:all 0.5s; }
+.mainwrap > h3 {width:420px; height:100px;font-family: 'Mukta Mahee', sans-serif; font-size:80px; letter-spacing: -1px ; font-weight:400 ;line-height:100px; color:#11ded7;float:right; position: absolute; left:57%; margin-left:-420px; text-align:right ; opacity:0}
+.mainwrap >h3.h3t1 {top:100px;transition:all 0.8s ease-in-out;}
+.mainwrap >h3.h3t2 {top:100px; font-size:30px;letter-spacing:1px; margin-left:-850px; transition:all 1.2s ease-in-out;}
+.mainwrap >h3.h3t3 {top:100px;transition:all 2s ease-in-out;}
+.mainwrap > h3:hover {text-shadow: 0px 0px 10px #fff;transition:all 0.5s; color:#000}
+
+/**********about**********/
+#about {width:100%; height:1050px; margin:0 auto;float:left; position: relative; }
+#ball {width:90px; height:90px; border-radius:50%; position: absolute;left:57%; margin-left:-600px; top:350px;text-align:center; }
+#ball a { color:#fff; font-size:18px;line-height:90px; display:block}
+#ball:hover  a { color:#11ded7}
+#ball {animation:updown3 1.8s infinite alternate ease-in-out;  animation-delay: 0.3s;
+ background:rgba(0, 0, 0, 0.1); box-shadow: 0px 0px 30px rgba(255,255,255,0.7); transition: all 0.5s;}
+
+@keyframes updown3 {
+  0% {top: 350px}
+  40% {top: 300px}
+  100% {top: 380px}
+}
+
+#about .symbol01 {width:46px; height:201px;position: absolute; left:57%; margin-left:-20px;top: 150px; }
+#about h4  {font-family:"nanum gothic"; font-size:14px; color:#fff;position: absolute;left:57%; top:230px; margin-left:-430px; text-align:right ; line-height:26px;width:400px; height:250px;font-weight:normal;opacity:0;transition: all 1s; }
+h4 span { font-weight:800;color:#9e9e9e}
+h4 span.bold {color:#fff}
+h5 {font-size:30px; color:#fff;left:57%; margin-left:30px; position:absolute ;}
+
+.gradtext {
+    background: #4cf096;
+    background: -webkit-linear-gradient(left, #48fc8d, #03ddd6);
+    background:    -moz-linear-gradient(right, #48fc8d, #03ddd6);
+    background:      -o-linear-gradient(right, #48fc8d, #03ddd6);
+    background:         linear-gradient(to right, #48fc8d, #03ddd6);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    font-weight: bold;
+    opacity:0;
+    top:170px; 
+    transition: all 0.5s;
+}
+.aboutwrap {width:1000px; height:570px; position: absolute; left:57%; margin-left:-600px; top:350px; }
+.starline {width:463px; height:287px; position: absolute; left:50%;  margin-left:-260px; top:200px;transition:all 2s; opacity: 0; }
+.man {width:312px; height:570px;position: absolute; left:50%;   margin-left:-200px; }
+
+.atext ul:nth-child(1) {text-align:right; position: absolute; top:240px; left:70px; width:200px; height:110px}
+.atext ul:nth-child(2) {text-align:right; position: absolute; top:470px; left:0; width:230px; height:80px; }
+.atext ul:nth-child(3) {text-align:left; position: absolute; top:175px; left:655px; width:250px; height:100px;  }
+.atext ul:nth-child(4) {text-align:left; position: absolute; top:315px; left:705px; width:300px; height:100px; }
+.atext ul:nth-child(5) {text-align:left; position: absolute; top:465px;  left:580px; width:350px; height:80px; }
+.atext ul li.stitle {color:#adadad; font-size:24px; font-weight:400;transition:all 0.3s; opacity:0; margin-top:50px}
+.atext ul li.star {font-size:80px; color:#11ded7;font-weight:nomal; width:40px; height:100px;float:left; line-height:75px ;  transition:all 1s; opacity: 0;}
+.atext ul:nth-child(1) li.star {float:right}
+.atext ul:nth-child(2) li.star {float:right}
+.atext ul li.stext {font-family:"nanum gothic"; color:#adadad; font-size:12px;line-height:22px; display:none; transition:all 0.5s; }
+.atext ul:nth-child(4) li.stext {font-size:14px; }
+.atext ul .stitle:hover {color:#fff;cursor: pointer; }
+.atext ul .stitle:hover~.stext {display:block;  transition:all 1s;}
+
+
+/**********web**********/
+#web01 {width:100%;height:1834px; margin:-224px auto 0 auto; background: url(../images/back-web.png)center no-repeat; float:left;    }
+#webwrap {width:100%;height:1610px;margin:220px auto 0 auto; float:left;  position: relative; }
+#webwrap > h6 {font-size:120px; letter-spacing: -5px; color:#fff; font-weight:normal; position:absolute; left:57%; margin-left:-330px; top:50px; opacity:0; transition: all 1s;}
+#webwrap > h6  span {font-size:200px; letter-spacing: -8px; }
+/*#webwrap .banner {position:relative;width:100%;height:604px; margin:300px auto 0 auto; border:1px solid #000}
+#webwrap .banner .mac {width:599px; height:604px; position: absolute;left:57%; margin-left:-260px; top:0; z-index:5}
+*/
+
+#container {width:532px; height: 376px;	position: absolute;left:57%; margin-left:-227px; top:296px;}
+
+#slides {width:100%; height:600px; position:absolute; z-index:100; margin:0 auto;}
+
+#slides .prev { width:162px; height:317px; position: absolute;left:57%; margin-left:-230px;left:0px; top:110px; display:block;  z-index:101;}
+#slides .next {width:162px; height:317px; position: absolute; left:57%; margin-left:300px;top:110px;display:block; z-index:101}
+
+.slides_container {	 overflow:hidden;  margin-top:37px; 	}
+
+.mac {width:599px; height:604px; position: absolute;left:57%; margin-left:-260px; top:300px;}
+
+.webcircle1 {width:550px; height:550px; border-radius:50%;background:transparent; position: absolute; top:320px;left:57%; margin-left:-650px; z-index: 20; display:none; z-index:9999; transition: all 1s;}
+.webcircle2 {width:550px; height:550px; border-radius:50%;background:transparent; position: absolute; top:320px;left:57%; margin-left:-650px; z-index: 20;display:none; transition: all 1s; z-index:9999;}
+.webcircle3 {width:550px; height:550px; border-radius:50%;background:transparent; position: absolute; top:320px;left:57%; margin-left:-650px; z-index: 20;display:none; transition: all 1s;z-index:9999;}
+.webcircle4 {width:550px; height:550px; border-radius:50%;background:transparent; position: absolute; top:320px;left:57%; margin-left:-650px; z-index: 20;display:none; transition: all 1s;z-index:9999;}
+
+.grad {
+    background : -webkit-linear-gradient(135deg, rgba(32, 252, 3, 0.3), rgba(4, 83, 253, 0.3));
+    background : -moz-linear-gradient(135deg, rgba(32, 252, 3, 0.3), rgba(4, 83, 253, 0.3));
+    background : -o-linear-gradient(135deg, rgba(32, 252, 3, 0.3), rgba(4, 83, 253, 0.3));
+    background : linear-gradient(135deg, rgba(32, 252, 3, 0.3), rgba(4, 83, 253, 0.3)); /*표준 구문*/
+}
+
+.grad2 {
+  background : -webkit-linear-gradient(135deg, rgba(255, 112, 215, 0.26), rgba(54, 128, 255, 0.25));
+  background : -moz-linear-gradient(135deg, rgba(255, 112, 215, 0.26), rgba(54, 128, 255, 0.25));
+  background : -o-linear-gradient(135deg, rgba(255, 112, 215, 0.26), rgba(54, 128, 255, 0.25));
+  background : linear-gradient(135deg, rgba(255, 112, 215, 0.26), rgba(54, 128, 255, 0.25)); /*표준 구문*/
+}
+
+.grad3 {
+  background : -webkit-linear-gradient(135deg, rgba(252, 176, 0, 0.3), rgba(255, 137, 124, 0.3),rgba(255, 113, 154,0.3));
+  background : -moz-linear-gradient(135deg, rgba(252, 176, 0, 0.3), rgba(255, 137, 124, 0.3),rgba(255, 113, 154,0.3));
+  background : -o-linear-gradient(135deg, rgba(252, 176, 0, 0.3), rgba(255, 137, 124, 0.3),rgba(255, 113, 154,0.3));
+  background : linear-gradient(135deg, rgba(252, 176, 0, 0.3), rgba(255, 137, 124, 0.3),rgba(255, 113, 154,0.3)); /*표준 구문*/
+}
+
+.grad4 {
+  background : -webkit-linear-gradient(135deg,rgba(52, 255, 17, 0.3),rgba(255, 107, 132, 0.3));
+  background : -moz-linear-gradient(135deg,rgba(52, 255, 17, 0.3),rgba(255, 107, 132, 0.3));
+  background : -o-linear-gradient(135deg,rgba(52, 255, 17, 0.3),rgba(255, 107, 132, 0.3));
+  background : linear-gradient(135deg,rgba(52, 255, 17, 0.3), rgba(255, 107, 132, 0.3)) /*표준 구문*/
+}
+
+.momo {background-image: linear-gradient(to top, rgba(255, 158, 227, 0.644), #7ea6eb9d 100%);}
+
+.parall-01 {width:300px; height:200px;position:absolute; transform: skewX(173deg); color:#494949 ; top:0px; left:100px; }
+.parall-01 p1 {font-size: 16px;position:absolute; top:190px; left:-60px}
+.parall-01 p1 span {font-size:48px; color:#fff}
+
+.parall-02 {width:300px; height:400px;position:absolute; transform: skewX(173deg);  top:115px; right:150px; text-align:right;display:inline-block; }
+.parall-02 p3 {font-size: 30px; text-align:right;  display:inline; line-height:30px;color:#494949 ; letter-spacing:-1px}
+.parall-02 p4 {font-size: 20px;  text-align:right;display:inline ;line-height:20px;color:#fff;}
+.parall-02 > p5 {font-size: 16px; text-align:right; display:inline; font-family:'nanum gothic'; font-weight:bold;line-height:20px;color:#494949 }
+.parall-02 > p5 span {font-size:12px}
+.parall-02 p6 {font-size: 18px; line-height:10px;text-align:right;display:inline;line-height:20px ; color:#FFF }
+
+.parall-03 {width:300px; height:200px;position:absolute; transform: skewX(173deg); color:#494949 ; top:0px; left:100px; }
+.parall-03 p1 {font-size: 16px;position:absolute; top:190px; left:-60px}
+.parall-03 p1 span {font-size:48px; color:#fff}
+
+.parall-04 {width:300px; height:400px;position:absolute; transform: skewX(173deg);  top:115px; right:150px; text-align:right;display:inline-block; }
+.parall-04 p3 {font-size: 30px; text-align:right;  display:inline; line-height:30px;color:#494949 ; letter-spacing:-1px}
+.parall-04 p4 {font-size: 20px;  text-align:right;display:inline ;line-height:20px;color:#fff;}
+.parall-04 > p5 {font-size: 16px; text-align:right; display:inline; font-family:'nanum gothic'; font-weight:bold;line-height:20px;color:#494949 }
+.parall-04 > p5 span {font-size:12px}
+.parall-04 p6 {font-size: 18px; line-height:10px;text-align:right;display:inline;line-height:20px ; color:#FFF }
+
+
+
+
+
+
+#webwrap .subtitle01 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:950px;  text-align:right; font-weight:700; font-size:28px; line-height:34px; opacity:0 ;transition: all 1s; }
+#webwrap .subtitle02 {width:400px; height:600px; position: absolute; left:57%; top:1050px; font-weight:700; font-size:20px; line-height:34px;  opacity:0 ;transition: all 1s; }
+.subtitle02  li {height:50px; line-height:26px; margin-bottom:35px;}
+.subtitle02  li  span {font-weight:400}
+.subtitle02  li  span.green {font-weight:700; color:#11ded7}
+.subtitle02  li a:hover {color:#11ded7}
+
+
+/**********app**********/
+
+#web02 {width:100%;height:1160px; margin: 0 auto;  background: url(../images/back-web02.jpg)center  no-repeat; float:left;}
+.appwrap {position:relative; width:100%;height:1000px;margin:0 auto; float:left; }
+
+.appwrap > .subtitle01 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:70px;  text-align:right; font-weight:700; font-size:28px; line-height:34px; z-index:10 ;opacity:0 ;transition: all 1s;}
+.appwrap > .subtitle02 {width:400px; height:600px; position: absolute; left:57%; top:840px; font-weight:700; font-size:20px; line-height:34px; opacity:0 ;transition: all 1s; }
+
+.appwrap > .arowleft {width:162px; height:317px; position: absolute; left:57%; margin-left:-530px; top:300px;opacity:0.5  }
+.appwrap > .arowright {width:162px; height:317px; position: absolute; left:57%; margin-left:135px; top:300px; opacity:0.5 }
+.appwrap > .arowright-after {width:162px; height:317px; position: absolute; left:57%; margin-left:500px; top:300px;display:none;opacity:0.5 }
+.arowright:hover {cursor: pointer;opacity:1 }
+.arowleft:hover {cursor: pointer;opacity:1 }
+
+.mobile01 {width:440px; height:700px; position: absolute; top: 140px; left:57%; margin-left:-320px; display:none;transition: all 1s; }
+.app-slide {position: absolute; top: 140px; left:57%; margin-left:-320px;display:none}
+.app-slide li  {width:440px; height:700px; position: absolute;top:0; left:0}
+.app-slide li:nth-child(1) {display:block}
+.app-slide li:nth-child(2) {display:none}
+.app-slide li:nth-child(3) {display:none}
+.app-slide li:nth-child(4) {display:none}
+.app-slide li:nth-child(5) {display:none}
+.app-slide li:nth-child(6) {display:none}
+.app-slide li:nth-child(7) {display:none}
+.app-slide li:nth-child(8) {display:none}
+.app-slide li:nth-child(9) {display:none}
+.app-slide li:nth-child(10) {display:none}
+
+.appwrap > .subtitle03 {width:300px; height:50px; position: absolute;top:160px;left:57%;  font-size:28px; line-height:32px;display:none}
+.appwrap > .subtitle03 span {font-size:16px;font-family:'Nanum Gothic'; font-weight:bold}
+.appwrap > .subtitle04 {width:450px; height:500px; position: absolute;top:240px;left:57%;  font-size:14px;line-height:30px;color:#9b6fcb; font-family:'Nanum Gothic';display:none}
+.appwrap > .subtitle04 span {color:#e39101}
+
+.c-move {width:800px; height:500px; position: absolute; left:57%; top:360px; display:none}
+.c-move  li {width:100px; height:100px; border-radius: 50%; font-size:16px; text-align:center;line-height:100px;border:6px solid rgba(255,255,255,0); transition: all 0.3s;display: block   }
+
+@keyframes updown4 {
+  0% {top: 120px}
+  100% {top: 200px}
+}
+
+@keyframes updown5 {
+  0% {top: 40px}
+  100% {top: 60px}
+}
+@keyframes updown6 {
+  0% {top: 70px}
+  100% {top: 50px}
+}
+@keyframes updown7 {
+  0% {top: 200px}
+  100% {top: 230px}
+}
+@keyframes updown8 {
+  0% {top: 260px}
+  100% {top: 230px}
+}
+@keyframes updown9 {
+  0% {top: 0px}
+  100% {top: 40px}
+}
+@keyframes updown10 {
+  0% {top: 210px}
+  100% {top: 150px}
+}
+@keyframes updown11 {
+  0% {top: 140px}
+  100% {top: 160px}
+}
+.c01 {background: rgba(195, 140, 253, 0.4);position: absolute; top:120px; left:0px; animation:updown4 2s infinite alternate ease-in-out; }
+.c02 {background: rgba(253, 191, 18, 0.5);position: absolute; top:120px; left:85px; animation:updown4 2.5s infinite alternate ease-in-out; }
+.c03 {background: rgba(253, 191, 18, 0.35);position: absolute; top:40px; left:180px; animation:updown5 1s infinite alternate ease-in-out;}
+.c04 {background: rgba(253, 191, 18, 0.2);position: absolute; top:70px; left:250px; animation:updown6 1s infinite alternate ease-in-out;}
+.c05 {background: rgba(195, 140, 253, 0.3);position: absolute; top:230px; left:150px; animation:updown7 1s infinite alternate ease-in-out;}
+.c06 {background: rgba(195, 140, 253, 0.2);position: absolute; top:200px; left:230px; animation:updown8 1s infinite alternate ease-in-out;}
+.c07 {background: rgba(255, 141, 34, 0.3);position: absolute; top:210px; left:280px;animation:updown10 1.5s infinite alternate ease-in-out; }
+.c08 {background: rgba(240, 107, 240, 0.2);position: absolute; top:0px; left:380px; animation:updown9 1s infinite alternate ease-in-out;}
+.c09 {background: rgba(240, 107, 240, 0.1);position: absolute; top:70px; left:430px; animation:updown6 1s infinite alternate ease-in-out;}
+.c10 {background: rgba(255, 141, 34, 0.1);position: absolute; top:230px; left:380px; animation:updown7 2s infinite alternate ease-in-out;}
+
+
+.c-move li:hover { border:6px solid rgba(255,255,255,1); box-shadow:5px 5px 10px rgba(0,0,0,0.5); }
+
+.mobile02 {width:440px; height:700px; position: absolute; top: 140px; left:57%; margin-left:-330px;transition: all 1s; animation:updown11 1s infinite alternate ease-in-out; }
+
+
+
+/**********design**********/
+
+#design01 {width:100%;height:1848px; margin:0 auto; background: url(../images/back-design.jpg) center no-repeat; float:left;  }
+.designwrap {position:relative; width:100%;height:1700px;margin:0 auto; float:left; }
+.designwrap  a {color:#fff}
+.designwrap  a:hover {color:#e39101}
+.designwrap > h6 {font-size:120px; letter-spacing: -5px; color:#777; font-weight:normal; position:absolute; left:57%; margin-left:-330px; top:140px;opacity:0; transition: all 1s;}
+.designwrap > h6  span {font-size:200px; letter-spacing: -8px; }
+
+.subtitle05  {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:450px;  text-align:right; font-weight:700; font-size:28px;color:#fff;opacity:0; transition: all 1s; }
+.subtitle05s {width:450px; height:500px; position: absolute;top:500px;left:57%;  font-size:14px;line-height:30px;color:#fff; font-family:'Nanum Gothic';opacity:0; transition: all 1.8s;}
+.subtitle06 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:730px;  text-align:right; font-weight:700; font-size:28px;color:#fff;opacity:0; transition: all 1s; }
+.subtitle06s  {width:450px; height:500px; position: absolute;top:780px;left:57%;  font-size:14px;line-height:30px;color:#fff; font-family:'Nanum Gothic';opacity:0; transition: all 1s;}
+.subtitle07 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:1010px;  text-align:right; font-weight:700; font-size:28px;color:#fff;opacity:0; transition: all 1s; }
+.subtitle07s  {width:450px; height:500px; position:absolute;top:1060px;left:57%;  font-size:14px;line-height:30px;color:#fff; font-family:'Nanum Gothic'; opacity:0; transition: all 1.8s;}
+.subtitle08 {width:400px; height:900px; position: absolute; left:57%; margin-left:-400px; top:1200px;  text-align:right; font-weight:700; font-size:28px;color:#fff; line-height:32px;opacity:0; transition: all 1s;}
+.subtitle08s  {width:450px; height:500px; position: absolute;top:1280px;left:57%;  font-size:14px;line-height:30px;color:#fff; font-family:'Nanum Gothic';opacity:0; transition: all 1.8s;}
+.subtitle09 {width:400px; height:1000px; position: absolute; left:57%; margin-left:-400px; top:1430px;  text-align:right; font-weight:700; font-size:28px;color:#fff; line-height:30px;opacity:0; transition: all 1s;}
+.subtitle09s  {width:450px; height:500px; position: absolute;top:1450px;left:57%;  font-size:14px;line-height:30px;color:#fff; font-family:'Nanum Gothic';opacity:0; transition: all 1.8s;}
+.subtitle09 span {font-size:20px}
+
+.bnb {position:absolute;left:57%; top: 1700px; margin-left:-660px;transition: all 1.8s;opacity:0;}
+.and {position:absolute;left:57%; top:0px; margin-left:-650px;transition: all 1.8s;opacity:0;}
+.boook {position:absolute;left:57%; top:800px; margin-left:-580px;transition: all 1.8s;opacity:0;}
+.bug {position:absolute;left:57%; top:2000px; margin-left:0px;transition: all 3s;opacity:0;}
+.double {position:absolute;left:57%; top:1020px; margin-left:-620px;transition: all 1s;opacity:0;}
+.colon {position:absolute;left:57%; top:800px; margin-left:450px;transition: all 1.8s;opacity:0;}
+.orange {position:absolute;left:57%; top:0px; margin-left:-700px;transition: all 2.5s;opacity:0;}
+
+.and:hover {animation:updown12 0.3s infinite alternate ease-in-out;}
+
+@keyframes updown12 {
+  0% {top: 150px}
+  100% {top: 160px}
+}
+.and div {position: absolute;left:180px; top:60px; opacity:0.2;transition: all 0.5s;}
+.orange div {position: absolute;left:503px; top:208px; opacity:0.2;transition: all 0.5s;}
+.boook div {position: absolute;left:160px; top:-420px; opacity:0.2;transition: all 0.5s;}
+.bnb div {position: absolute;left:150px; top:-185px; opacity:0.2;transition: all 0.5s;}
+.double div {position: absolute;left:280px; top:-130px; opacity:0.2;transition: all 0.5s;}
+
+.orange:hover {animation:updown16 0.3s infinite alternate ease-in-out;}
+.boook:hover {animation:updown13 0.3s infinite alternate ease-in-out;}
+.double:hover {animation:updown14 0.3s infinite alternate ease-in-out;}
+.bnb:hover {animation:updown15 0.3s infinite alternate ease-in-out;}
+@keyframes updown13 {
+  0% {top: 950px}
+  100% {top: 960px}
+}
+@keyframes updown14 {
+  0% {top: 1220px}
+  100% {top: 1230px}
+}
+@keyframes updown15 {
+  0% {top: 1050px}
+  100% {top: 1060px}
+}
+@keyframes updown16 {
+  0% {top: 330px}
+  100% {top: 340px}
+}
+
+.and:hover div{opacity:0.5}
+.orange:hover div{opacity:0.5}
+.boook:hover div{opacity:0.5}
+.bnb:hover div{opacity:0.5}
+.double:hover div{opacity:0.5}
+
+
+/**********world**********/
+
+#world {width:100%;height:3000px; margin:0 auto; background:#f2f2f2; float:left}
+.worldwrap01 {width:100%; height:940px; margin:0 auto; position: relative;float:left}
+.code01 {width:800px; height:350px; position:absolute; left:57%; top:250px; margin-left:-800px ; text-align:right; }
+.code01 > ul > li {font-size:48px; line-height:60px; color:#898989; margin-top: 250px;  opacity: 0;transition: all 1s;}
+.eg {color:#00b29e}
+
+.og {color:#e9a003}
+.code02 {width:500px; height:400px; font-size:14px; position: absolute; left:57%; top:550px;font-family:"Nanum Gothic"; line-height:40px;opacity: 0;transition: all 1s;z-index: 6;}
+
+.worldwrap02 {width:100%; height:1940px; margin:0 auto; position: relative;float:left}
+.worldwrap02 > h6 {font-size:120px; letter-spacing: -5px; color:#fff; font-weight:normal; position:absolute; left:57%; margin-left:-330px; top:50px;text-shadow:20px 20px 20px rgba(0, 0, 0,0.2); opacity:0; transition: all 1s;z-index: 5 }
+.worldwrap02 > h6  span {font-size:200px; letter-spacing: -8px; }
+
+.circle2 {width:2112px; height:2112px;  background: url(../images/circle-up.png) no-repeat ; position: absolute; left:57%; margin-left:-1200px; top:50px;z-index: 2;/*display:none*/}
+.circle1 {width:2112px; height:2112px; background: url(../images/circle-00.png) no-repeat;  position: absolute; left:57%; margin-left:-1030px; top:400px;opacity: 1;z-index:3}
+
+.circle2.action {animation: ani_circle2 20s infinite linear; }
+
+@keyframes ani_circle2 {
+  0% {transform: rotate(0)}
+  100% {transform: rotate(360deg)}
+}
+
+
+.subtitle10 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:400px;  text-align:right; font-weight:700; font-size:28px; line-height:34px; z-index: 4;opacity:0; transition: all 1s; }
+.subtitle11 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:1250px;  text-align:right; font-weight:700; font-size:28px; line-height:34px; opacity:0; transition: all 1s; z-index: 4 }
+.subtitle12 {width:400px; height:100px; position: absolute; left:57%; margin-left:-400px; top:1550px;  text-align:right; font-weight:700; font-size:28px; line-height:34px; opacity:0; transition: all 1s; z-index: 7 }
+
+.subtitle10s {width:400px; height:600px; position: absolute; left:57%; top:510px; opacity:0; transition: all 1s;z-index: 4  }
+.subtitle10s  li {font-size:20px; font-weight:700}
+.subtitle10s  li span {color:#11ded7}
+.subtitle10s  li a:hover {color:#11ded7}
+
+.worldwrap02 div ul li.ktext {font-size:14px; font-family:'Nanum Gothic'; font-weight:400; margin-bottom:15px; line-height:20px; display:block}
+
+.subtitle11s {width:400px; height:600px; position: absolute; left:57%; top:1250px;  opacity:0; transition: all 1s;z-index: 4  }
+.subtitle11s  li {font-size:20px; font-weight:700}
+.subtitle11s  li span {color:#11ded7}
+.subtitle11s  li a:hover {color:#11ded7}
+
+.worldwrap02 .subtitle12s {width:400px; height:600px; position: absolute; left:57%; top:1610px; opacity:0; transition: all 1s; z-index: 7 }
+.subtitle12s  li {font-size:20px; font-weight:700}
+.subtitle12s  li span {color:#11ded7}
+.subtitle12s  li a:hover {color:#11ded7}
+.black-t {color:#000}
+
+
+
+.number {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 500px; margin-left:-500px; width:460px; height:430px; background:url(../images/number.png)no-repeat left;}
+
+.family {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 350px; margin-left:-500px; width:477px; height:800px; background:url(../images/family.png)no-repeat top left; }
+
+.ribbon {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 500px; margin-left:-500px; width:386px; height:439px; background:url(../images/ribbon.png)no-repeat left; }
+
+.reflet {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 500px; margin-left:-450px; width:386px; height:439px; background:url(../images/reflet.png)no-repeat left; }
+
+.child {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 600px; margin-left:-450px; width:337px; height:241px; background:url(../images/child.png)no-repeat left; }
+
+.truth {position:absolute; z-index: 10; transition:all 1s; display:none;  left:57%; top: 800px; margin-left:-400px; width:300px; height:220px; background:url(../images/truth.png)no-repeat left; }
+
+.teacher {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top:700px; margin-left:-300px; width:300px; height:439px; background:url(../images/teacher.png)no-repeat left; }
+
+.dontbe {position:absolute; z-index: 10; transition:all 1s; display:none; left:57%; top: 800px; margin-left:-300px; width:210px; height:290px; background:url(../images/dontbe.png)no-repeat left; }
+
+.mother {position:absolute;left:57%; top: 1107px; margin-left:-430px; z-index: 10;transition:all 0.5s; width:426px; height:300px;background:url(../images/mother.png) no-repeat left top; display:none}
+.s304 {position:absolute;left:57%; top: 1107px; margin-left:-430px; z-index: 10;transition:all 0.5s; width:426px; height:300px;background:url(../images/s304.png) no-repeat left top; display:none}
+.star-child {position:absolute;left:57%; top: 1107px; margin-left:-430px; z-index: 10;transition:all 0.5s; width:426px; height:300px;background:url(../images/star-child.png) no-repeat left top; display:none}
+
+.writing {position:absolute;left:57%; top: 1500px; margin-left:-600px; z-index: 10;transition:all 0.5s; width:608px; height:400px;background:url(../images/writing.png) no-repeat left top; display:none}
+
+.addborder {width:100%; height:300px; position: absolute; top:1905px; left:50%; margin-left:-50% }
+
+
+
+/**********contact**********/
+#contact {width:100%;height:1260px; margin:0 auto; background: url(../images/back-main00.jpg) center no-repeat; float:left;background-size:100%;background-position:top;background-attachment:fixed; 
+  transition: all 20s;}
+#contact:hover {background-position:bottom }
+#contactwrap {width:100%; height:950px; margin:300px auto 0 auto; position: relative; }
+#contactwrap  h6 {width:500px;color:#fff; font-weight:normal; position:absolute; left:57%; margin-left:-500px; top:300px; font-size:140px; letter-spacing: -5px; text-align:right; opacity:0; transition: all 1s;}
+.context { position: absolute; top: 330px; left:57%; margin-left:20px;}
+.context ul li {height:30px; font-size:18px; color:#fff;}
+.context ul li span {color:#11ded7}
+.icon01 {width:60px; height:60px; border-radius: 30px; background:#11ded7; position: absolute;left:57%; top:450px; margin-left:20px;text-align:center;animation: updown2 1.5s infinite alternate ease-in-out; opacity:0.6}
+.icon02 {width:60px; height:60px; border-radius: 30px; background:#11ded7; position: absolute;left:57%; top:490px; margin-left:110px; text-align:center; animation: updown1 1.5s infinite alternate ease-in-out; animation-delay: 0.3s; opacity:0.6}
+.icon03 {width:60px; height:60px; border-radius: 30px; background:#11ded7; position: absolute;left:57%; top:450px; margin-left:200px;text-align:center;  animation: updown2 1.5s infinite alternate ease-in-out; animation-delay: 0.3s; opacity:0.6}
+.icon01:hover {opacity:1}
+.icon02:hover {opacity:1}
+.icon03:hover {opacity:1}
+@keyframes updown1 {
+  0% {top: 470px}
+  50% {top: 450px}
+  100% {top: 470px}
+}
+@keyframes updown2 {
+  0% {top: 430px}
+  50% {top:480px}
+  100% {top:430px}
+}
+
+#contactwrap div i {font-size:40px;  color:#fff; line-height:60px; }
+
+
+/**********메뉴페이지*********/
+#menu01 {width:100%; height:100%; background:#ebebeb;position: fixed; top: 0; display:none; z-index: 777;}
+#menu01 .box {width:85px; height:38px; position: absolute; top:27px; right:60px;   z-index: 99; display:block}
+#menu01 .box .ham {width:42px; height:38px; font-family: 'Mukta Mahee', sans-serif;  color:#9e9e9e;  font-size:16px; line-height:38px;text-align:center; font-weight:400 ;position: absolute;right:22px;transition:all 0.1s ease-in}
+#menu01 .box .ham-b {width:42px; height:38px; background:url(../images/left.png) no-repeat; position:absolute; right:50px; transition:all 0.2s ease-in }
+#menu01 .box .ham-a {width:42px; height:38px; background:url(../images/right.png) no-repeat;  position:absolute;right:-28px;transition:all 0.2s ease-in}
+#menu01  .symbol02 {width:100px; height:600px;position: absolute; left:57%; margin-left:-150px;top:180px;  display:none }
+#menu01 .front-p {font-family:"crimson text"; font-size:14px;  position:fixed; left:40px;top:30px; line-height:18px;font-style: italic; font-weight:100; display:none;  color:#9e9e9e;line-height:24px;}
+
+#menu01 h2 {font-size:173px; color:#fff;position: absolute;left:57%; top:350px; margin-left:-10px; font-weight:700 ;opacity:1; display:none }
+#menu01 h2  span{font-size:24px; color:#11ded7; }
+#menu01 .porttext {font-family:"crimson text"; font-size:12px; color:#9e9e9e; position: fixed; left:40px; bottom:20px; font-style: italic; transform: rotate(-90deg); transform-origin: left top; display:none}
+
+.menu-text {width:500px; height:500px; position:absolute; top:200px; left:57%; margin-left:-650px; display:none;}
+.menu-text li a{display:block; height:80px;font-size:36px; color:#9e9e9e;  text-align:right;  transition:all 0.2s ease-in }
+.menu-text li a span {font-size: 76px; color: #11ded7; opacity:0; line-height:90px; vertical-align: -30px }
+
+.menu-text li a:hover span {opacity:1}
+.menu-text li a:hover {text-shadow: 7px 10px 15px rgba(0, 0, 0, 0.2); color:#fff}
+
+.me02 {top:340px;left:50%; margin-left:-420px; width:400px; height:50px; line-height:18px;font-family: 'nanum gothic'; font-size:12px; text-align:right; position: absolute;display:none; color:#acacac;transition:all 0.2s ease-in}
+.me03 {top:420px;left:50%; margin-left:-420px; width:400px; height:50px; line-height:18px;font-family: 'nanum gothic'; font-size:12px; text-align:right; position: absolute;display:none; color:#acacac;transition:all 0.2s ease-in}
+.me04 {top:500px;left:50%; margin-left:-420px; width:400px; height:50px; line-height:18px;font-family: 'nanum gothic'; font-size:12px; text-align:right; position: absolute;display:none; color:#acacac;transition:all 0.2s ease-in}
+.me05 {top:580px;left:50%; margin-left:-420px; width:400px; height:50px; line-height:18px;font-family: 'nanum gothic'; font-size:12px; text-align:right; position: absolute;display:none; color:#acacac;transition:all 0.2s ease-in}
+
+
