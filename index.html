@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Portfolio of Death </title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <div id="visual">
+        <div class="moon"></div>
+        <div class="content_Homepage">
+            <ul>
+                <li class="c01"><a href="#"><img src="images/content01.jpg" alt=""></a></li>
+                <li class="c02"><a href="#"><img src="images/content01.jpg" alt=""></a></li>
+                <li class="c03"><a href="#"><img src="images/content01.jpg" alt=""></a></li>
+                <li class="c04"><a href="#"><img src="images/content01.jpg" alt=""></a></li>
+                <li class="c05"><a href="#"><img src="images/content01.jpg" alt=""></a></li>
+                <li class="c06">Contents</li>
+                <li class="c07">Effect</li>
+                <li class="c08">UI/UX</li>
+                <li class="c09">Convenience</li>
+                <li class="c10">go Main</li>
+            </ul>
+        </div>
+        <div class="left_top"><img src="images/left_top.png" alt=""></div>
+        <div class="right_top"><img src="images/right_top.png" alt=""></div>
+        <div class="right_bottom"><img src="images/right_bottom.png" alt=""></div>
+        <div class="left_bottom"><img src="images/left_bottom.png" alt=""></div>
+        <div class="Bird_box">
+           <div class="Bird">
+               <div class="Bird_ani"></div>
+           </div>
+        </div>
+        <div class="Me">
+            <ul>
+                <li><a href="#">Here I am.</a></li>
+            </ul>
+        </div>
+        <div class="Door">
+            <ul>
+                <li class="top"></li>
+                <li class="text01"><a href="#">Knock<br>Here</a></li>
+                <li class="text02"><a href="#">Knock<br><span>More</span></a></li>
+                <li class="bg"><img src="images/door0.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="Deer">
+            <ul>
+                <li class="text"><a href="#" class="homepage">Homepage</a></li>
+                <li class="bg"></li>
+            </ul>
+        </div>
+        <div class="Squirrel">
+            <ul>
+                <li class="text"><a href="#" class="detailpage">Detailpage(준비중)</a></li>
+                <li class="bg"></li>
+            </ul>
+        </div>
+        <div class="Rabbit">
+            <ul>
+                <li class="text popup"><a href="#">Popup(준비중)</a></li>
+                <li class="bg"></li>
+            </ul>
+        </div>
+        <div class="Owl">
+            <ul>
+                <li class="text"><a href="#" class="banner">Banner(준비중)</a></li>
+                <li class="bg"></li>
+            </ul>
+        </div>
+        <div class="Bear">
+            <ul>
+                <li class="top"></li>
+                <li class="text"><a href="#" class="onepage">Onepage(준비중)</a></li>
+                <li class="bg"></li>
+            </ul>
+        </div>
+        <div class="leaf">
+            <ul>
+                <li class="leaf01"></li>
+                <li class="leaf02"></li>
+            </ul>
+        </div>
+        <div class="sub_text">
+            <ul>
+                <li class="bg"></li>
+                <li class="title"></li>
+            </ul>
+            <ul class="text_box">
+                <li class="text_title1">임의의 가상 병원 홈페이지<br></li>
+                <li class="text1">
+                    신뢰감을 주는 파란색 계열 포인트컬러와 사각형을 컨셉으로 잡고, 이 포인트컬러를 중심으로 전체적인 디자인을 구상 후 세련미 넘치는 병원 홈페이지를 제작.
+                </li>
+                <li class="text_title2">얻게 된 것들<br></li>
+                <li class="text2">
+                    이 사이트를 바탕으로 처음으로 PC와 모바일 두가지 버전에서 구현되는 사이트를 제작하였다. 모바일 버전과 PC 버전을 따로 만드는 것이 아닌 한 사이트를 사이즈에 따라 바뀌는 반응형 웹으로 만드는 작업이었다. <br> 　크기를 PC와 태블릿, 모바일 이 세 구간으로 나누어 상황에 따라 메뉴를 숨기고 버튼으로 표현하기도 하고 PC에는 있는 기능들을 모바일에 맞추어 바꾸면서 사용자들에 대한 이해도와 편의성을 높이기 위해 끊임없이 노력하며 제작에 임했다.
+                </li>
+            </ul>
+        </div>
+        <div class="cloud">
+            <ul>
+                <li class="cloud01"></li>
+                <li class="cloud02"></li>
+                <li class="cloud03"></li>
+                <li class="cloud04"></li>
+                <li class="cloud05"></li>
+            </ul>
+        </div>
+        <div class="bgbottom">
+            <ul>
+                <li class="sky"></li>
+                <li class="bottom"></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-animate-css-rotate-scale.js"></script>
+    <script>
+      
+    $(document).ready(function(){
+        $('.Door .bg').animate({scale: '1.1'}, 4000)
+                           
+        var num = 0;
+        
+        $('.Door').click(function(){
+            
+            num++
+            
+            if (num == 1) {
+                $('.Deer,.Squirrel,.Rabbit,.Owl,.Bear,.text02').addClass('action');
+                $('.text01').hide();
+                $('.text02').show(); 
+                knock();
+            };
+            if (num == 2) {
+                
+                $('.Me').addClass('action');
+                $('.text02').hide();
+                knock();
+                              
+            }
+            if (num == 3) {
+                $('.Deer,.Squirrel,.Rabbit,.Owl,.Bear,.Me').removeClass('action');
+                $('.text01').show();
+                knock();
+                num = 0
+            }
+            console.log(num)
+            
+            function knock(){
+                $('.Door .bg').animate({scale: '1.08'}, 150).animate({scale: '1.1'}, 150).animate({scale: '1.08'}, 150).animate({scale: '1.1'}, 300);
+            }
+            
+            
+        }); return false
+        
+
+        
+    })
+        
+    $(document).ready(function(){
+        
+        $('.homepage').click(function(){
+            $('.Door').fadeOut(2500);
+            $('.Deer,.Squirrel,.Rabbit,.Owl,.Bear,.Me').fadeOut(5000);
+            $('#visual,.cloud,.sub_text').addClass('hyerin');
+            return false
+        }); 
+        $('.c10').click(function(){
+            $('.Door').fadeIn(2500);
+            $('.Deer,.Squirrel,.Rabbit,.Owl,.Bear,.Me').fadeIn(5000);
+            $('#visual,.cloud,.sub_text').removeClass('hyerin');
+            return false
+        }); 
+        
+    })
+        
+        
+        
+        
+    </script>
+    
+    
+</body>
+
+</html>
